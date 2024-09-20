@@ -6,7 +6,6 @@ for i in range(7):
     for j in range(7 - i):
         matrix[i][j] = i + j + 1
 
-# Виводимо масив на екран
+# Виводимо масив поелементно без квадратних дужок
 for row in matrix:
-    print(row)
-
+    print(*row)

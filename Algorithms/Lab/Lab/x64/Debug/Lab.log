@@ -1,0 +1,3 @@
+﻿  Lab.cpp
+C:\Users\belik\source\repos\Studying\Algorithms\Lab\Lab.cpp(32,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Lab.vcxproj -> C:\Users\belik\source\repos\Studying\Algorithms\Lab\x64\Debug\Lab.exe
