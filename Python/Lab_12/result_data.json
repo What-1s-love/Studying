@@ -1,0 +1,25 @@
+{
+    "position": 6,
+    "teams_with_less_points": [
+        {
+            "team": "Team NEW",
+            "points": 21
+        },
+        {
+            "team": "Team F",
+            "points": 20
+        },
+        {
+            "team": "Team G",
+            "points": 18
+        },
+        {
+            "team": "Team H",
+            "points": 15
+        },
+        {
+            "team": "Team I",
+            "points": 12
+        }
+    ]
+}

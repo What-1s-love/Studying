@@ -1,0 +1,42 @@
+[
+    {
+        "team": "Team A",
+        "points": 35
+    },
+    {
+        "team": "Team B",
+        "points": 30
+    },
+    {
+        "team": "Team C",
+        "points": 28
+    },
+    {
+        "team": "Team D",
+        "points": 25
+    },
+    {
+        "team": "Team E",
+        "points": 22
+    },
+    {
+        "team": "Team NEW",
+        "points": 21
+    },
+    {
+        "team": "Team F",
+        "points": 20
+    },
+    {
+        "team": "Team G",
+        "points": 18
+    },
+    {
+        "team": "Team H",
+        "points": 15
+    },
+    {
+        "team": "Team I",
+        "points": 12
+    }
+]
