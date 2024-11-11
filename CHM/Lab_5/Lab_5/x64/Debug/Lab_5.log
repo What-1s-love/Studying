@@ -1,0 +1,14 @@
+﻿  Lab_5.cpp
+C:\Users\belik\source\repos\Studying\CHM\Lab_5\Lab_5.cpp(9,20): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\belik\source\repos\Studying\CHM\Lab_5\Lab_5.cpp(9,25): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\belik\source\repos\Studying\CHM\Lab_5\Lab_5.cpp(9,30): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\belik\source\repos\Studying\CHM\Lab_5\Lab_5.cpp(9,35): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\belik\source\repos\Studying\CHM\Lab_5\Lab_5.cpp(9,40): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\belik\source\repos\Studying\CHM\Lab_5\Lab_5.cpp(9,45): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\belik\source\repos\Studying\CHM\Lab_5\Lab_5.cpp(9,50): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\belik\source\repos\Studying\CHM\Lab_5\Lab_5.cpp(9,55): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\belik\source\repos\Studying\CHM\Lab_5\Lab_5.cpp(26,22): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\belik\source\repos\Studying\CHM\Lab_5\Lab_5.cpp(29,22): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\belik\source\repos\Studying\CHM\Lab_5\Lab_5.cpp(33,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\belik\source\repos\Studying\CHM\Lab_5\Lab_5.cpp(37,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Lab_5.vcxproj -> C:\Users\belik\source\repos\Studying\CHM\Lab_5\x64\Debug\Lab_5.exe
