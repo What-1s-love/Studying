@@ -1,0 +1,5 @@
+﻿  CountryQuiz.cpp
+C:\Users\belik\source\repos\Studying\Algorithms\Lab_13\CountryQuiz.cpp(12,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  testDriver.cpp
+  Generating Code...
+  Lab_13.vcxproj -> C:\Users\belik\source\repos\Studying\Algorithms\Lab_13\x64\Debug\Lab_13.exe
