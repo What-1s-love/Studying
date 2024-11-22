@@ -11,7 +11,7 @@ const string kyivstarCodes[] = { "067", "068", "096", "097", "098" };
 const string vodafoneCodes[] = { "050", "066", "095", "099" };
 const string lifecellCodes[] = { "063", "073", "093" };
 const int operatorCount = 3;
-const int maxNumbersPerOperator = 200;  // Maximum numbers per operator
+const int maxNumbersPerOperator = 10000;  // Maximum numbers per operator
 
 // Function to check prefix match
 string getOperatorByCode(const string& phoneNumber) {
@@ -47,7 +47,7 @@ int main() {
     }
 
     // Dynamic array for storing subscribers
-    const int maxSubscribers = 1000;  // Assume max 1000 subscribers
+    const int maxSubscribers = 10000;  // Assume max 1000 subscribers
     Subscriber* subscribers = new Subscriber[maxSubscribers];  // Allocate memory
     int subscriberCount = 0;
 
