@@ -1,0 +1,1 @@
+simple example text add text like goal process text perform tokenization lemmatization stemming
