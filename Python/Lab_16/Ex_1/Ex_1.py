@@ -1,4 +1,4 @@
-import nltk
+п»їimport nltk
 import string
 import matplotlib.pyplot as plt
 from collections import Counter
@@ -6,50 +6,52 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.corpus import gutenberg
 
-# Завантаження необхідних ресурсів з NLTK
-nltk.download('gutenberg')  # Для текстів з Project Gutenberg
-nltk.download('stopwords')  # Для списку стоп-слів
-nltk.download('punkt')  # Для токенізації
-nltk.download('wordnet')  # Для лемматизації (якщо буде потрібно)
+# Р—Р°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ РЅРµРѕР±С…С–РґРЅРёС… СЂРµСЃСѓСЂСЃС–РІ Р· NLTK
+nltk.download('gutenberg')
+nltk.download('stopwords')
+nltk.download('punkt')
 
-# Завантажуємо текст з Project Gutenberg (наприклад, "Emma" Джейн Остін)
+# Р—Р°РІР°РЅС‚Р°Р¶СѓС”РјРѕ С‚РµРєСЃС‚ Р· Project Gutenberg
 text = gutenberg.raw('austen-emma.txt')
 
-# Функція для підрахунку слів у тексті
+# Р¤СѓРЅРєС†С–СЏ РґР»СЏ РїС–РґСЂР°С…СѓРЅРєСѓ РєС–Р»СЊРєРѕСЃС‚С– СЃР»С–РІ Сѓ С‚РµРєСЃС‚С–
 def count_words(text):
-    sentences = nltk.sent_tokenize(text)  # Токенізація по реченням
-    word_count = 0
-    for sentence in sentences:
-        words = nltk.word_tokenize(sentence)  # Токенізація по словах
-        word_count += len(words)
-    return word_count
+    words = nltk.word_tokenize(text)  # РўРѕРєРµРЅС–Р·Р°С†С–СЏ С‚РµРєСЃС‚Сѓ РїРѕ СЃР»РѕРІР°С…
+    return len(words)
 
-# Функція для знаходження найбільш вживаних слів
-def most_used_words(text):
-    words = word_tokenize(text.lower())  # Токенізація тексту в нижньому регістрі
-    words = [word for word in words if word.isalpha()]  # Видаляємо пунктуацію
-    stop_words = set(stopwords.words('english'))  # Отримуємо стоп-слова
-    filtered_words = [word for word in words if word not in stop_words]  # Видалення стоп-слів
-    word_counts = Counter(filtered_words)  # Підрахунок слів
-    common_words = word_counts.most_common(10)  # 10 найбільш вживаних слів
+# РџС–РґСЂР°С…СѓРЅРѕРє РєС–Р»СЊРєРѕСЃС‚С– СЃР»С–РІ
+word_count = count_words(text)
+print(f"РљС–Р»СЊРєС–СЃС‚СЊ СЃР»С–РІ Сѓ С‚РµРєСЃС‚С–: {word_count}")
 
-    # Візуалізація на діаграмі
-    x = [word[0] for word in common_words]  # Слова
-    y = [word[1] for word in common_words]  # Кількість повторів
+# Р¤СѓРЅРєС†С–СЏ РґР»СЏ РїРѕР±СѓРґРѕРІРё РіСЂР°С„С–РєР°
+def plot_word_frequency(word_counts, title):
+    common_words = word_counts.most_common(10)  # РўРѕРї-10 РЅР°Р№Р±С–Р»СЊС€ РІР¶РёРІР°РЅРёС… СЃР»С–РІ
+    x = [word[0] for word in common_words]  # РЎР»РѕРІР°
+    y = [word[1] for word in common_words]  # РљС–Р»СЊРєС–СЃС‚СЊ РїРѕРІС‚РѕСЂС–РІ
     plt.bar(x, y)
-    plt.title("10 найбільш вживаних слів у тексті")
-    plt.xlabel("Слова")
-    plt.ylabel("Кількість повторів")
+    plt.title(title)
+    plt.xlabel("РЎР»РѕРІР°")
+    plt.ylabel("РљС–Р»СЊРєС–СЃС‚СЊ РїРѕРІС‚РѕСЂС–РІ")
     plt.show()
 
-# Підрахунок слів у тексті
-word_count = count_words(text)
-print(f"Кількість слів у тексті: {word_count}")
+# Р¤СѓРЅРєС†С–СЏ РґР»СЏ РѕР±СЂРѕР±РєРё С‚РµРєСЃС‚Сѓ
+def analyze_text(text, remove_stopwords=False):
+    words = word_tokenize(text.lower())  # РўРѕРєРµРЅС–Р·Р°С†С–СЏ С‚РµРєСЃС‚Сѓ РІ РЅРёР¶РЅСЊРѕРјСѓ СЂРµРіС–СЃС‚СЂС–
+    words = [word for word in words if word.isalpha()]  # Р’РёРґР°Р»РµРЅРЅСЏ РїСѓРЅРєС‚СѓР°С†С–С—
 
-# Визначення 10 найбільш вживаних слів до обробки
-most_used_words(text)
+    if remove_stopwords:
+        stop_words = set(stopwords.words('english'))
+        words = [word for word in words if word not in stop_words]  # Р’РёРґР°Р»РµРЅРЅСЏ СЃС‚РѕРї-СЃР»С–РІ
 
-# Видалення пунктуації та стоп-слів, потім пошук найбільш вживаних слів
-text_no_stopwords = ' '.join([word for word in word_tokenize(text.lower()) if word.isalpha() and word not in stopwords.words('english')])
-most_used_words(text_no_stopwords)
+    word_counts = Counter(words)  # РџС–РґСЂР°С…СѓРЅРѕРє СЃР»С–РІ
+    return word_counts
+
+# РђРЅР°Р»С–Р· С‚РµРєСЃС‚Сѓ РґРѕ РІРёРґР°Р»РµРЅРЅСЏ СЃС‚РѕРї-СЃР»С–РІ
+word_counts_original = analyze_text(text, remove_stopwords=False)
+plot_word_frequency(word_counts_original, "РўРѕРї-10 СЃР»С–РІ Р”Рћ РІРёРґР°Р»РµРЅРЅСЏ СЃС‚РѕРї-СЃР»С–РІ")
+
+# РђРЅР°Р»С–Р· С‚РµРєСЃС‚Сѓ РїС–СЃР»СЏ РІРёРґР°Р»РµРЅРЅСЏ СЃС‚РѕРї-СЃР»С–РІ
+word_counts_no_stopwords = analyze_text(text, remove_stopwords=True)
+plot_word_frequency(word_counts_no_stopwords, "РўРѕРї-10 СЃР»С–РІ РџР†РЎР›РЇ РІРёРґР°Р»РµРЅРЅСЏ СЃС‚РѕРї-СЃР»С–РІ")
+
 

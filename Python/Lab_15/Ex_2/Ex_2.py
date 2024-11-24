@@ -1,31 +1,40 @@
 ﻿import pandas as pd
 import matplotlib.pyplot as plt
 
-# Завантажуємо дані з CSV
-file_path = 'velo_data_2009.csv'  # вказуємо ваш шлях до файлу
-df = pd.read_csv(file_path, sep=';', encoding='latin1', parse_dates=['Date'], dayfirst=True, index_col='Date')
+# Ігноруємо попередження
+import warnings
+warnings.filterwarnings("ignore", message="Parsing dates in .*")
+
+# Завантаження файлу
+file_path = 'velo_data_2009.csv'
+df = pd.read_csv(file_path, sep=';', encoding='latin1', parse_dates=['Date'], index_col='Date')
 
 # Агрегуємо дані за місяцями
-monthly_data = df.resample('M').sum()
+monthly_data = df.resample('ME').sum()  # Використовуємо 'ME' замість 'M'
 
-# Виводимо дані на екран
-print(monthly_data)
+# Побудова стовпчастої діаграми
+plt.figure(figsize=(10, 6))  # Збільшуємо висоту графіка
+ukrainian_months = [
+    "січень", "лютий", "березень", "квітень", "травень", "червень",
+    "липень", "серпень", "вересень", "жовтень", "листопад", "грудень"
+]
+month_numbers = monthly_data.index.month
+month_names = [ukrainian_months[m - 1] for m in month_numbers]
 
-# Побудова графіку
-plt.figure(figsize=(15, 10))  # розмір графіку
-monthly_data.plot()  # побудова лінійного графіку
-plt.title('Кількість велосипедистів по місяцях у 2009 році')  # заголовок графіку
-plt.xlabel('Місяці')  # підпис осі X
-plt.ylabel('Кількість велосипедистів')  # підпис осі Y
-plt.grid(True)  # відображення сітки
+plt.bar(month_names, monthly_data['Cyclists'], color='lightblue', edgecolor='black')  # Стовпчики
+plt.title('Кількість велосипедистів по місяцях у 2009 році', fontsize=14)
+plt.xlabel('Місяці', fontsize=12)
+plt.ylabel('Кількість велосипедистів', fontsize=12)
+plt.xticks(rotation=45, fontsize=10)  # Обертаємо підписи місяців
+plt.grid(axis='y', alpha=0.5)  # Горизонтальна сітка
 
-# Показуємо графік
-plt.xticks(monthly_data.index.month, 
-           labels=monthly_data.index.strftime('%b'), rotation=45)  # підпис місяців
+plt.tight_layout()
 plt.show()
 
 # Знаходимо найбільш популярний місяць
-most_popular_month = monthly_data.idxmax()
+most_popular_month = monthly_data.sum(axis=1).idxmax()
+month_number = most_popular_month.month
+month_name = ukrainian_months[month_number - 1]
 
-# Виводимо найбільш популярний місяць
-print("Найбільш популярний місяць:", most_popular_month.strftime('%B %Y'), monthly_data.loc[most_popular_month])
+# Виводимо лише результат
+print(f"Найбільш популярний місяць: {month_number} {month_name}")
