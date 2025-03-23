@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\belik\\source\\repos\\Studying\\Algorithms\\Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2E4A8EF-8FE7-44B0-A964-DE95C45E0E54}|Project.vcxproj|C:\\Users\\belik\\source\\repos\\Studying\\Algorithms\\Project\\Project.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2E4A8EF-8FE7-44B0-A964-DE95C45E0E54}|Project.vcxproj|solutionrelative:Project.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\belik\\source\\repos\\Studying\\Algorithms\\Project\\Project.vcxproj.filters||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Project.vcxproj.filters||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\belik\\source\\repos\\Studying\\Algorithms\\Project\\Project.vcxproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Project.vcxproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\belik\\source\\repos\\Studying\\Algorithms\\Project\\Project.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Project.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,15 +35,39 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Project.vcxproj.filters",
+              "DocumentMoniker": "C:\\Users\\belik\\source\\repos\\Studying\\Algorithms\\Project\\Project.vcxproj.filters",
+              "RelativeDocumentMoniker": "Project.vcxproj.filters",
+              "ToolTip": "C:\\Users\\belik\\source\\repos\\Studying\\Algorithms\\Project\\Project.vcxproj.filters",
+              "RelativeToolTip": "Project.vcxproj.filters",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-02T21:18:30.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Project.vcxproj.user",
+              "DocumentMoniker": "C:\\Users\\belik\\source\\repos\\Studying\\Algorithms\\Project\\Project.vcxproj.user",
+              "RelativeDocumentMoniker": "Project.vcxproj.user",
+              "ToolTip": "C:\\Users\\belik\\source\\repos\\Studying\\Algorithms\\Project\\Project.vcxproj.user",
+              "RelativeToolTip": "Project.vcxproj.user",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
+              "WhenOpened": "2024-12-02T21:18:28.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Project.cpp",
               "DocumentMoniker": "C:\\Users\\belik\\source\\repos\\Studying\\Algorithms\\Project\\Project.cpp",
               "RelativeDocumentMoniker": "Project.cpp",
               "ToolTip": "C:\\Users\\belik\\source\\repos\\Studying\\Algorithms\\Project\\Project.cpp",
               "RelativeToolTip": "Project.cpp",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAkwGUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-08T20:45:41.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-08T20:45:41.221Z"
             }
           ]
         }

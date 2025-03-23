@@ -11,16 +11,16 @@
       "RelativeMoniker": "D:0:0:{043D5910-971B-4EC4-8B81-32D0338243EB}|Example_Project.vcxproj|solutionrelative:Subscriber.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{043D5910-971B-4EC4-8B81-32D0338243EB}|Example_Project.vcxproj|C:\\Users\\belik\\source\\repos\\Studying\\Algorithms\\Example_Project\\RadixSort.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043D5910-971B-4EC4-8B81-32D0338243EB}|Example_Project.vcxproj|solutionrelative:RadixSort.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{043D5910-971B-4EC4-8B81-32D0338243EB}|Example_Project.vcxproj|C:\\Users\\belik\\source\\repos\\Studying\\Algorithms\\Example_Project\\PhoneNumbers.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{043D5910-971B-4EC4-8B81-32D0338243EB}|Example_Project.vcxproj|solutionrelative:PhoneNumbers.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{043D5910-971B-4EC4-8B81-32D0338243EB}|Example_Project.vcxproj|C:\\Users\\belik\\source\\repos\\Studying\\Algorithms\\Example_Project\\Subscriber.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{043D5910-971B-4EC4-8B81-32D0338243EB}|Example_Project.vcxproj|solutionrelative:Subscriber.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{043D5910-971B-4EC4-8B81-32D0338243EB}|Example_Project.vcxproj|C:\\Users\\belik\\source\\repos\\Studying\\Algorithms\\Example_Project\\RadixSort.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{043D5910-971B-4EC4-8B81-32D0338243EB}|Example_Project.vcxproj|solutionrelative:RadixSort.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{043D5910-971B-4EC4-8B81-32D0338243EB}|Example_Project.vcxproj|C:\\Users\\belik\\source\\repos\\Studying\\Algorithms\\Example_Project\\RadixSort.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -47,12 +47,11 @@
               "ViewState": "AgIAABsAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-14T15:27:42.339Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "RadixSort.h",
               "DocumentMoniker": "C:\\Users\\belik\\source\\repos\\Studying\\Algorithms\\Example_Project\\RadixSort.h",
               "RelativeDocumentMoniker": "RadixSort.h",
@@ -66,7 +65,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Subscriber.h",
               "DocumentMoniker": "C:\\Users\\belik\\source\\repos\\Studying\\Algorithms\\Example_Project\\Subscriber.h",
               "RelativeDocumentMoniker": "Subscriber.h",
@@ -75,12 +74,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-11-14T16:18:57.013Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PhoneNumbers.txt",
               "DocumentMoniker": "C:\\Users\\belik\\source\\repos\\Studying\\Algorithms\\Example_Project\\PhoneNumbers.txt",
               "RelativeDocumentMoniker": "PhoneNumbers.txt",
@@ -89,8 +87,7 @@
               "ViewState": "AgIAAF8AAAAAAAAAAAAiwEcBAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2024-11-14T16:41:00.526Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -121,7 +118,7 @@
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\belik\\source\\repos\\Studying\\Algorithms\\Example_Project\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-14T15:25:57.566Z",
               "EditorCaption": ""
