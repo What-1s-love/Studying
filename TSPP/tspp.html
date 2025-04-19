@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погодка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Вкладки */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+        }
+        .tab {
+            padding: 14px 20px;
+            cursor: pointer;
+            color: white;
+            background-color: #333;
+            border: 1px solid #ccc;
+            margin-right: 5px;
+            transition: background-color 0.3s;
+        }
+        .tab:hover {
+            background-color: #555;
+        }
+        .active {
+            background-color: #4CAF50;
+        }
+
+        /* Кнопка ФАЙЛ чорнобіла */
+        .file-button {
+            padding: 14px 20px;
+            cursor: pointer;
+            color: black;
+            background-color: white;
+            border: 1px solid #333;
+            margin-right: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .file-button:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        /* Контент вкладок */
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+            border-top: 1px solid #ccc;
+            margin-top: 10px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Оформлення вікна авторизації */
+        .auth-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+        }
+        .auth-box {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .auth-box h2 {
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        /* Форма фільтрації */
+        select, input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Стилі для інформації */
+        .info-box {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Стилі для редактора */
+        .editor-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .editor-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin-top: 20px;
+        }
+        .editor-box input, .editor-box textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Погодка</h1>
+    </header>
+
+    <!-- Вкладки -->
+    <div class="tabs">
+        <div class="file-button" id="fileButton">ФАЙЛ</div> <!-- Кнопка ФАЙЛ -->
+        <div class="tab active" id="tab1" onclick="showTab(1)">Авторизація</div>
+        <div class="tab" id="tab2" onclick="showTab(2)">Головна</div>
+        <div class="tab" id="tab3" onclick="showTab(3)">Фільтрація</div>
+        <div class="tab" id="tab4" onclick="showTab(4)">Редагування (Для робітника компанії)</div>
+    </div>
+
+    <!-- Контент вкладок -->
+    <div id="content1" class="tab-content active">
+        <div class="auth-container">
+            <div class="auth-box">
+                <h2>Авторизація</h2>
+                <form id="authForm">
+                    <input type="text" id="login" name="login" placeholder="Логін" required>
+                    <input type="password" id="password" name="password" placeholder="Пароль" required>
+                    <button type="submit">Увійти</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="content2" class="tab-content">
+        <h2>Головна сторінка</h2>
+        <div class="info-box">
+            <p>Ласкаво просимо до системи прогнозу погоди "Погодка"! Тут ви можете переглядати дані про погоду, фільтрувати їх за різними параметрами та експортувати в різні формати.</p>
+        </div>
+
+        <h3>Приклад даних про погоду:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Дата</th>
+                    <th>Температура</th>
+                    <th>Опади</th>
+                    <th>Вітер</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01.03.2025</td>
+                    <td>+5°C</td>
+                    <td>Невеликі</td>
+                    <td>Північний, 5 м/с</td>
+                </tr>
+                <tr>
+                    <td>02.03.2025</td>
+                    <td>+6°C</td>
+                    <td>Без опадів</td>
+                    <td>Західний, 3 м/с</td>
+                </tr>
+                <tr>
+                    <td>03.03.2025</td>
+                    <td>+4°C</td>
+                    <td>Дощ</td>
+                    <td>Південний, 4 м/с</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="content3" class="tab-content">
+        <h2>Фільтрація</h2>
+        <form id="filterForm">
+            <label for="month">Місяць</label>
+            <select id="month" name="month">
+                <option value="1">Січень</option>
+                <option value="2">Лютий</option>
+                <option value="3">Березень</option>
+                <option value="4">Квітень</option>
+                <option value="5">Травень</option>
+                <option value="6">Червень</option>
+                <option value="7">Липень</option>
+                <option value="8">Серпень</option>
+                <option value="9">Вересень</option>
+                <option value="10">Жовтень</option>
+                <option value="11">Листопад</option>
+                <option value="12">Грудень</option>
+            </select>
+            <label for="day">День</label>
+            <input type="number" id="day" name="day" min="1" max="31" required>
+            <button type="submit">Застосувати фільтри</button>
+        </form>
+    </div>
+
+    <!-- Редагування для робітника компанії -->
+    <div id="content4" class="tab-content">
+        <h2>Редагування даних (Для робітника компанії)</h2>
+        <div class="editor-container">
+            <div class="editor-box">
+                <h3>Додати новий запис погоди:</h3>
+                <form id="addWeatherForm">
+                    <input type="date" id="newDate" name="date" required>
+                    <input type="text" id="newTemperature" name="temperature" placeholder="Температура" required>
+                    <input type="text" id="newPrecipitation" name="precipitation" placeholder="Опади" required>
+                    <input type="text" id="newWind" name="wind" placeholder="Вітер" required>
+                    <button type="submit">Додати</button>
+                </form>
+            </div>
+
+            <div class="editor-box">
+                <h3>Видалити запис погоди:</h3>
+                <form id="deleteWeatherForm">
+                    <input type="date" id="deleteDate" name="date" required>
+                    <button type="submit">Видалити</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Погодка. Всі права захищені.</p>
+    </footer>
+
+    <script>
+        function showTab(tabIndex) {
+            // Приховуємо всі вкладки
+            const contents = document.querySelectorAll('.tab-content');
+            const tabs = document.querySelectorAll('.tab');
+            contents.forEach(content => content.classList.remove('active'));
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // Показуємо відповідну вкладку
+            document.getElementById('content' + tabIndex).classList.add('active');
+            document.getElementById('tab' + tabIndex).classList.add('active');
+        }
+
+        // Події для форм
+        document.getElementById("authForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Авторизація здійснена!");
+        });
+
+        document.getElementById("filterForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const month = document.getElementById("month").value;
+            const day = document.getElementById("day").value;
+            alert(`Фільтрація за ${month} місяцем та ${day} днем`);
+        });
+
+        document.getElementById("addWeatherForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Нове дані погоди додано!");
+        });
+
+        document.getElementById("deleteWeatherForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Запис погоди видалено!");
+        });
+    </script>
+</body>
+</html>
