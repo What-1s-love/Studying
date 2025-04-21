@@ -1,15 +1,20 @@
 #include <stdio.h>
 
 int main() {
-    int totalSeconds;
-    printf("Enter total seconds: ");
-    scanf("%d", &totalSeconds);
+    char ch;
+    printf("Enter a character: ");
+    scanf(" %c", &ch); // пробіл перед %c, щоб зчитати навіть після інших scanf
 
-    int hours = totalSeconds / 3600;
-    int minutes = (totalSeconds % 3600) / 60;
-    int seconds = totalSeconds % 60;
-
-    printf("Time: %d hours, %d minutes, %d seconds\n", hours, minutes, seconds);
+    if (ch >= '0' && ch <= '9') {
+        int value = ch - '0'; // перетворення символу в число
+        printf("Digit with value: %d\n", value);
+    } else if (ch >= 'a' && ch <= 'z') {
+        printf("Lowercase letter\n");
+    } else if (ch >= 'A' && ch <= 'Z') {
+        printf("Uppercase letter\n");
+    } else {
+        printf("Other symbol\n");
+    }
 
     return 0;
 }

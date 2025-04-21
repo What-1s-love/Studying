@@ -1,22 +1,20 @@
 #include <stdio.h>
 
 int main() {
-    char str[100];
-    int len = 0;
+    char ch;
+    printf("Enter a character: ");
+    scanf(" %c", &ch); // пробіл перед %c, щоб зчитати навіть після інших scanf
 
-    printf("Enter a string (max 99 characters): ");
-    fgets(str, 100, stdin);  // безпечне зчитування рядка
-
-    // Обчислюємо довжину вручну (не використовуємо strlen)
-    while (str[len] != '\0' && str[len] != '\n') {
-        len++;
+    if (ch >= '0' && ch <= '9') {
+        int value = ch - '0'; // перетворення символу в число
+        printf("Digit with value: %d\n", value);
+    } else if (ch >= 'a' && ch <= 'z') {
+        printf("Lowercase letter\n");
+    } else if (ch >= 'A' && ch <= 'Z') {
+        printf("Uppercase letter\n");
+    } else {
+        printf("Other symbol\n");
     }
-
-    printf("Reversed string: ");
-    for (int i = len - 1; i >= 0; i--) {
-        putchar(str[i]);
-    }
-    printf("\n");
 
     return 0;
 }
